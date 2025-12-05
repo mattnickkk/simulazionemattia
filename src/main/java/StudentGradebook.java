@@ -28,7 +28,7 @@ public class StudentGradebook {
         // BUG INTENZIONALE 1:
         // L'università accetta 30, ma qui la condizione è 'grade < 30'.
         // Se provi ad aggiungere 30, lancerà eccezione.
-        if (grade < 0 || grade >= 30) {
+        if (grade < 0 || grade > 30) {
             throw new IllegalArgumentException("Grade must be between 0 and 30");
         }
         grades.add(grade);
