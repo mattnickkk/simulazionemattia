@@ -23,7 +23,11 @@ public class StudentGradebookTests {
         assertThrows(IllegalArgumentException.class, () -> {StudentGradebook gradebook = new StudentGradebook (nome);});
     }
 
-
+    @Test
+    public void nomeNulloLancaEccezioneTest() {
+        String nome = null;
+        assertThrows(IllegalArgumentException.class, () -> {StudentGradebook gradebook = new StudentGradebook(nome);});
+    }
 
 
 
